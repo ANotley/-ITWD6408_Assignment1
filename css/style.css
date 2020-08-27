@@ -1,0 +1,235 @@
+/*--------- GLOBAL STYLES -------*/
+* {
+    box-sizing: border-box  ;
+}
+
+body {
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    font-size: 1.1em;
+    font-family:  'Arial', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    min-height: 4.2em;
+    background-color: #2a3a4a;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ------------HEADER & NAV BAR SECTION - GLOBAL STYLE ---------------- */
+/* Header */
+header {
+    width: 100%;
+    min-height: 7vh;
+    /* max-height instead? */
+    background-color:#2a3a4a;
+    padding: 1.5em 0; 
+    line-height: 2.3em;
+    color: white;
+    border-bottom: #2a9b35 8px solid;
+}
+
+ul { /*remove default padding from ul*/
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Bar */
+.navbar {
+    overflow: hidden;
+}
+
+header a { /*nav bar links*/
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+header li { /*list items themselves*/
+    float: left; /*Puts the list items next to each other*/
+    display: inline;
+    padding: 0 20px; /*Change to a responsive value*/
+}
+
+header #branding h1 {
+    margin: 0; 
+}
+
+header #branding {
+    float: left;
+}   
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+a.active {
+    color: #2a9b35;
+}
+
+/* Add a red background color to navigation links on hover */
+a:hover, .subnav:hover .subnav-btn:hover {
+    background-color: #007491;
+}
+
+/* header a:hover {
+    background-color: #007491;
+} */
+
+
+/* ------------SECTION 1: SHOWCASE --------------- */
+#showcase {
+    color: #f2f2f2;
+    padding: 4em 0 6rem 0;  
+    min-height: 40vh;
+    /* width: 95%; */
+
+
+    /* Background Image */
+    /* background: #000 url('../images/showcase-image.jpeg') no-repeat;no-repeat 0 -150px */
+    /* background-size: cover; */
+    display: block;
+    position: relative;
+}
+
+#showcase::before    {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    background: url('../images/showcase-image.jpeg') no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+/* #showcase h1 {
+    font-size: 2.0em;
+} */
+
+/* #showcase p {
+    font-size: 1.1em;
+} */
+
+/* ------------SECTION 2: WEB TECHNOLOGIES --------------- */
+#web-tech {
+    background-color: #007491;;
+    color: black;
+    padding: 4em 0 6rem 0;  
+    min-height: 30vh;
+    width: 100%;
+}
+
+/* #web-tech h1 {
+    font-size: 1.5em;
+} */
+
+/* ------------SECTION 3: MY BIO --------------- */
+#bio {
+    background-color: #2a9b35;
+    width: 100%;
+}
+
+/* ------------SECTION 4: DEVELOPMENT SKILLS --------------- */
+#skills{
+    padding: 2rem 0;
+} 
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 1em;  
+    text-align: center;
+
+} 
+
+.grid > div {
+    background: lightgray;
+    padding: 0.5em;
+}
+
+.grid img {
+    object-fit: contain;
+    max-width: 30%;
+    height: auto;
+    align-items: center;
+}
+
+/* ------------SECTION 5: STATEMENT OF AUTHENTICITY --------------- */
+
+/* ------------ FOOTER -------------- */
+
+/* ------------ RESPONSIVENESS ----------------- */
+/*TABLET*/
+@media screen and (min-width: 600px) { 
+    /* Showcase Section */
+    #showcase {
+        /* width: 90%; */
+        min-height: 30vh;
+        font-size: 1.3em;
+        /* Heading font size: 3.0em */
+    }
+
+    /* Web Tech Section */
+    #web-tech {
+        width: 100%;
+
+    }
+}
+
+/* DESKTOP*/
+@media screen and (min-width:768px){	
+	nav ul li {/*Responsive: Make the menu horizontal*/
+		display: inline-block;
+    }
+    
+    .logo{
+        width: 3.0em; 
+        height: 3.0em;
+    }
+
+    /* Showcase Section */
+    #showcase {
+        /* width: 80%; */
+        min-height: 30vh;
+        font-size: 1.5em;
+        /* Heading font-size 3.3em */
+    }
+
+    /* Web Tech Section */  
+    #web-tech {
+        width: 50%;
+    }
+
+    /* Bio Section */
+    #bio {
+        width: 50%;
+    }
+    /* Make the development skills section span across in three columns on desktop */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;  
+        text-align: center;
+    } 
+}
+
