@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <!--Make website responsive-->
@@ -7,115 +7,147 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <!--Link to external style sheet-->
-        <link rel="stylesheet" type="text/css" href="css/style.css">            
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <title>CSS Grid Tutorial | Welcome</title>
+        <!--Link to external JS script -->
+        <script src="scripts/scripts.js"></script>
+
+        <title>Version 1 | Assignment</title>
     </head>
 
     <body>
-        <header>
-            <div class="container">
-                <!-- logo and name in top left corner of 'nav bar' -->
-                <div id="branding">
-                    <h2>ITWD 6.408</h2>
-                </div>
+        <!-- Wrapper wraps around the whole body section and is what holds and sets up the css grid -->
+        <div class="wrapper">
+            <header>
+                <div class="container">
+                    <!-- logo and name in top left corner of 'nav bar' -->
+                    <div id="branding">
+                        <img src="images/globe-grid.svg" alt="logo" class="logo"/>
+                        <h2 class="tagline"> ITWD 6.408</h2>
+                    </div>
+    
+                    <!-- nav bar -->
+                    <div class="topnav" id="myTopnav">
+                        <a href="#home" class="active">Home</a>
+                        <div class="dropdown">
+                          <button class="dropbtn">Forms</button>
+                          <div class="dropdown-content">
+                            <a href="#html-forms">HTML Forms</a>
+                            <a href="#google-forms">Google Forms</a>
+                          </div>
+                        </div>
 
-                <!-- nav bar -->
-                <div id="main-navbar-links">
-                    <nav>
-                        <ul>
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="#xml">XML</a></li>
-                            <li><a href="#research"></a></li>                            
-                            <li><a href="#Javascript">Javascript</a></li>
-                        <ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+                        <div class="dropdown">
+                            <button class="dropbtn">XML</button>
+                            <div class="dropdown-content">
+                                <a href="#xml-rules">XML Rules</a>
+                                <a href="#xml-rss">XML RSS</a>
+                            </div>
+                        </div>
 
-        <!-- Section 1: Showcase -->
-        <section id="showcase">
-            <div class="container">
-                <h1>Advanced Internet and Web Learning Portfolio</h1>
+                        <div class="dropdown">
+                           <button class="dropbtn">Research</button>
+                            <div class="dropdown-content">
+                                <a href="#seo">SEO</a>
+                                <a href="#copyright">Copyright</a>
+                                <a href="#references">References</a>
+                            </div>
+                        </div>
+                        <a href="#Javascript">Javascript</a>
+                        <a href="javascript:void(0);" class="icon" onclick="collapseNavBar()">&#9776;</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Section 1: Showcase -->
+            <section id="showcase">
+                <div class="container">
+                    <h1 class="showcase-text">Advanced Internet and Web Learning Portfolio</h1>
+                    <p class="showcase-text"> I'm taking this course because I want to further my knowledge and skills on website development so that I am better equipped for the industry. I want to take my practical skills in web development to the next level so that I can confidently create a website that would be aesthetically pleasing and fully functional on my own in the real world. Eventually, furthering my skills so that I can develop websites in a way that reflects the current technology and industry standards.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: My 10 Web Technologies -->
+            <section id="web-tech">
+                <div class="container">
+                    <h2>My Web Technologies</h2>
+                    <p>Make a list and describe the top ten web technologies you use (This could be hardware or 
+                        software), e.g. Google Drive, for backing up assessments and sharing files.</p>
+                    <ol type="1">
+                        <li>HTML 5</li>
+                        <li>CSS 3</li>
+                        <li>Javascript</li>
+                        <li>XML</li>
+                        <li>GitHub: For backing up and saving code versions as I work on a project.</li>
+                        <li>Google Drive: For sharing and backing up data. </li>
+                        <li>Visual Studio Code: My code editor of choice.</li>
+                        <li>Email: To recieve data from web forms.</li>
+                        <li>Google Forms: To create and manage web forms easily.</li>
+                        <li>pexels.com: Finding quality free open source images.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Section 3: My Bio -->
+            <section id="bio">
+                <div class="container">
+                    <h2>Bio</h2>
+                    <img src="images/my-avatar.svg" alt="My Avatar">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+
+            <!-- Section 4: Development Skills -->
+            <section id="skills">
+                <div class="container">
+                    <h2>Development Skills</h2>
+                    <div class="nested-grid">                        
+                        <div>
+                            <br>
+                            <img src="images/html-5.svg" alt="Html 5 Logo">   
+                            <br>
+                            <p><strong>HTML 5 Markup</strong></p>     
+                            <br>         
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>
+                        </div>
+                            
+                        <div>
+                            <br>
+                            <img src="images/css-3.svg" alt="CSS Logo">
+                            <br>
+                            <p><strong>CSS 3 Styling</strong></p>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>
+                        </div>
+
+                        <div>
+                            <br>
+                            <img src="images/xml-file.svg" alt="Javascript Logo">
+                            <br>
+                            <p><strong>Javascript Interactivity</strong></p>
+                                <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>                                
+                        </div>
+                    </div>
+                </div>  
+            </section>
+
+
+            <!-- Section 5: Statement of Authenticity -->
+            <section id="authenticity">
+                <h2>Statement of Authenticity</h2>
+                <p>I confirm that
                 <br>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices, ultricies urna nec, tempor lectus. Quisque condimentum dolor at enim interdum malesuada. Proin gravida nulla vel tincidunt varius. Etiam iaculis libero sit amet quam bibendum lacinia. Duis laoreet fermentum erat eu fermentum. Sed ac molestie sem, sit amet facilisis orci. Sed facilisis blandit mi a tincidunt. Mauris quam orci, malesuada ac viverra eget, malesuada quis odio. Vestibulum lobortis, dolor vel consectetur dapibus, neque eros tempus quam, in fermentum massa dolor nec sem. Nulla a. </p>
-            </div>
-        </section>
+                <p>This is an original assesment and is entirely my own work. It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text. No material which to a substantial extent has been submitted for any other academic course is included without acknowledge.
+                <br><br>
+                <strong>Proudly developed by Chris Smith </strong> and rebuilt by Alicia Notley
 
-        <!-- Section 2: My 10 Web Technologies -->
-        <section id="web-tech">
-            <div class="container">
-                <h2>My Web Technologies</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <ol type="1">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
-            </div>
-        </section>
+                </p>
+            </section>
 
-
-        <!-- Section 3: My Bio -->
-        <section id="bio">
-            <div class="container">
-                <h2>Bio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </section>
-
-
-        <!-- Section 4: Development Skills -->
-        <!-- Establish CSS Grid for Development Skills Section  -->
-        <section id="skills">
-            <div class="container">
-                <h2>Development Skills</h2>
-                <br>
-                <div class="grid">                        
-                    <div>
-                        <br>
-                        <img src="images/html-5.svg" alt="Html 5 Logo">   
-                        <br><br>
-                        <p class="bold">HTML 5 Markup</p>
-                        <br>                      
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices.
-                    </div>
-                        
-                    <div>
-                        <br>
-                        <img src="images/css-3.svg" alt="CSS Logo">
-                        <br><br>
-                        <p class="bold">CSS 3 Styling</P>
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices.
-                    </div>
-
-                    <div>
-                        <br>
-                        <img src="images/xml-file.svg" alt="Javascript Logo">
-                        <br><br>
-                        <p class="bold">Javascript Interactivity</P>
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. 
-                    </div>
-                </div>
-            </div>  
-        </section>
-
-        <!-- Section 5: Statement of Authenticity -->
-        
-
+            <footer>
+                <h1>Footer</h1>
+            </footer>
+        </div>    
     </body>
-
-    <footer>
-        
-    </footer>
 </html>
