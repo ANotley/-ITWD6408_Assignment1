@@ -1,3 +1,358 @@
+<<<<<<< HEAD
+/*--------- GLOBAL STYLES -------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    font-size: 1.1em;
+    font-family:  'Arial', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Used inside div tags */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Wraps all of the content in the body in order for css grid to be set up */
+.wrapper {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    /* grid-auto-rows: minmax(auto, auto); */
+}
+
+footer {
+    min-height: 4.2em;
+    background-color: #2a3a4a;
+    color: white;
+    text-align: center;
+}
+
+/* ------------HEADER & NAV BAR SECTION - GLOBAL STYLE ---------------- */
+/* Header */
+header {
+    width: 100%;
+    min-height: 7vh;
+    background-color:#2a3a4a;
+    padding: 1.5em 0; 
+    line-height: 2.3em;
+    color: white;
+    border-bottom: #2a9b35 6px solid;
+}
+
+header > .container{
+position: relative;
+}  
+
+.logo {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+/* Affects the tagline */
+.tagline {
+    margin: 0;
+} 
+
+ul { /*remove default padding from ul*/
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Bar */
+.navbar {
+    overflow: hidden;
+}
+
+header a { /*nav bar links*/
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+header li { /*list items themselves*/
+    float: left; /*Puts the list items next to each other*/
+    display: inline;
+    padding: 0 20px; /*Change to a responsive value*/
+}
+
+header #branding h1 {
+    margin: 0; 
+}
+
+header #branding {
+    float: left;
+}   
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+a.active {
+    color: #2a9b35;
+}
+
+/* Add a red background color to navigation links on hover */
+a:hover, .subnav:hover .subnav-btn:hover {
+    background-color: #007491;
+}
+
+/* header a:hover {
+    background-color: #007491;
+} */
+
+
+/* ------------SECTION 1: SHOWCASE --------------- */
+#showcase {
+    color: #f2f2f2;
+    padding: 4em 0 6rem 0;  
+    min-height: 40vh;
+    /* width: 95%; */
+
+
+    /* Background Image */
+    /* background: #000 url('../images/showcase-image.jpeg') no-repeat;no-repeat 0 -150px */
+    /* background-size: cover; */
+    display: block;
+    position: relative;
+}
+
+#showcase::before    {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    background: url('../images/showcase-image.jpeg') no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#showcase > h1 {
+    font-size: 2.0em;
+} 
+
+#showcase > p {
+    font-size: 1.1em;
+} 
+
+/* ------------SECTION 2: WEB TECHNOLOGIES --------------- */
+#web-tech {
+    background-color: #007491;;
+    color: black;
+    padding: 4em 0 6rem 0;  
+    min-height: 30vh;
+    width: 100%;
+}
+
+#web-tech > h1 {
+    font-size: 1.5em;
+} 
+
+/* ------------SECTION 3: MY BIO --------------- */
+#bio {
+    background-color: #2a9b35;
+    width: 100%;
+
+    /* CSS GRID */
+    grid-row: 3/4;
+}
+
+#bio img {
+    height: 8.0em;
+    width: 8.0em;
+    border-radius: ;
+    object-fit: contain;
+    max-width: 30%;
+    height: auto;
+    align-items: center;
+}
+
+/* ------------SECTION 4: DEVELOPMENT SKILLS --------------- */
+#skills{
+    padding: 2rem 0;
+} 
+
+.nested-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;  
+    text-align: center;
+    overflow: hidden;
+} 
+
+.nested-grid > div {
+    background: lightgray;
+    padding: 0.5em;
+}
+
+.nested-grid img {
+    object-fit: contain;
+    max-width: 30%;
+    height: auto;
+    align-items: center;
+}
+
+/* ------------SECTION 5: STATEMENT OF AUTHENTICITY --------------- */
+#authenticity {
+    background-color: tomato;
+}
+
+#authenticity > h2 {
+    font-size: 1.5em;
+}
+
+#authenticity > p {
+    font-size: 1.2em;
+}
+/* ------------ FOOTER -------------- */
+footer {
+    border-top: #2a9b35 6px solid;
+}
+
+/* ------------ RESPONSIVENESS ----------------- */
+/*TABLET*/
+@media screen and (min-width: 600px) { 
+    /* ----- HEADER & NAV BAR SECTION -----*/
+    .tagline {
+        float: right; 
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0; 
+        text-indent: 2em; 
+    } 
+
+     /* ----- SECTION 1: SHOWCASE -----*/
+    #showcase {
+        /* width: 90%; */
+        min-height: 30vh;
+        font-size: 1.3em;
+        /* Heading font size: 3.0em */
+    }
+
+    /* ----- SECTION 2: WEB TECHNOLOGIES -----*/
+    #web-tech {
+        width: 100%;
+
+    }
+}
+
+/* DESKTOP*/
+@media screen and (min-width:768px){
+    /* ----- GLOBAL STYLES ----- */
+    /* Wraps all of the content in the body in order for css grid to be set up */
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    /* ----- HEADER & NAV BAR SECTION -----*/
+    header {
+        /* CSS GRID */
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+	nav ul li {/*Responsive: Make the menu horizontal*/
+		display: inline-block;
+    }
+    
+    .logo {
+        width: 3.0em; 
+        height: 3.0em;
+    }
+    
+    /* Affects the tagline */
+    .tagline {
+        float: right; 
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0; 
+        text-indent: 3em; 
+    }   
+
+    /* ----- SECTION 1: SHOWCASE -----*/
+    /* Showcase Section*/
+    #showcase {
+        /* width: 80%;*/
+        min-height: 30vh;
+        font-size: 1.5em;
+        /* Heading font-size 3.3em $*/
+
+        /* CSS GRID */
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    /* ----- SECTION 2: WEB TECHNOLOGIES -----*/
+    #web-tech {
+        width: 50%;
+
+        /* CSS GRID */
+        grid-column: 1;
+        grid-row: 3/4;
+    } 
+
+    /* ----- SECTION 3: MY BIO -----*/
+    #bio {
+        width: 50%;
+
+        /* CSS GRID */
+        grid-column: 2;
+        grid-row: 3/4;
+    }
+
+    /* ----- SECTION 4: DEVELOPMENT SKILLS -----*/
+    #skills {
+        /* CSS GRID */
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    /* Make the development skills section span across in three columns on desktop */
+    .nested-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;  
+        text-align: center;
+    } 
+
+    /* ----- SECTION 5: STATEMENT OF AUTHENTICITY -----*/
+    #authenticity {
+        /* CSS GRID */
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+        /* CSS GRID */  
+        grid-column: 1/3;
+        grid-row: 6/7;
+    }
+}
+
+=======
 .wrapper {
     display: grid;
     grid-auto-rows: minmax(8em, auto);
@@ -66,3 +421,4 @@ footer {
     grid-column: 1/3;
     grid-row: 6/7;
 }
+>>>>>>> e334b413525f001a9c8e265898ab5f60d579da82
