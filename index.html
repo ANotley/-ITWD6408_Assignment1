@@ -12,67 +12,68 @@
         <!--Link to external JS script -->
         <script src="scripts/scripts.js"></script>
 
-        <title>Version 1 | Assignment</title>
+        <title> Assignment 1 | Home</title>
     </head>
 
     <body>
-        <!-- Wrapper wraps around the whole body section and is what holds and sets up the css grid -->
-        <div class="wrapper">
-            <header>
-                <div class="container">
-                    <!-- logo and name in top left corner of 'nav bar' -->
-                    <div id="branding">
-                        <img src="images/globe-grid.svg" alt="logo" class="logo"/>
-                        <h2 class="tagline"> ITWD 6.408</h2>
-                    </div>
+        <header>
+            <div class="container">
+                <!-- logo and name in top left corner of 'nav bar' -->
+                <div id="branding">
+                    <img src="images/globe-grid.svg" alt="logo" class="logo"/>
+                    <h2 class="tagline"> ITWD 6.408</h2>
+                </div>
     
-                    <!-- nav bar -->
-                    <div class="topnav" id="myTopnav">
-                        <a href="#home" class="active">Home</a>
-                        <div class="dropdown">
-                          <button class="dropbtn">Forms</button>
-                          <div class="dropdown-content">
-                            <a href="#html-forms">HTML Forms</a>
+                <!-- nav bar -->
+                <div class="topnav" id="myTopnav">
+                    <a href="#home" class="active">Home</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Forms</button>
+                        <div class="dropdown-content">
+                            <a href="html-form.html">HTML Forms</a>
                             <a href="#google-forms">Google Forms</a>
-                          </div>
                         </div>
-
-                        <div class="dropdown">
-                            <button class="dropbtn">XML</button>
-                            <div class="dropdown-content">
-                                <a href="#xml-rules">XML Rules</a>
-                                <a href="#xml-rss">XML RSS</a>
-                            </div>
-                        </div>
-
-                        <div class="dropdown">
-                           <button class="dropbtn">Research</button>
-                            <div class="dropdown-content">
-                                <a href="#seo">SEO</a>
-                                <a href="#copyright">Copyright</a>
-                                <a href="#references">References</a>
-                            </div>
-                        </div>
-                        <a href="#Javascript">Javascript</a>
-                        <a href="javascript:void(0);" class="icon" onclick="collapseNavBar()">&#9776;</a>
                     </div>
-                </div>
-            </header>
 
-            <!-- Section 1: Showcase -->
-            <section id="showcase">
-                <div class="container">
-                    <h1 class="showcase-text">Advanced Internet and Web Learning Portfolio</h1>
-                    <p class="showcase-text"> I'm taking this course because I want to further my knowledge and skills on website development so that I am better equipped for the industry. I want to take my practical skills in web development to the next level so that I can confidently create a website that would be aesthetically pleasing and fully functional on my own in the real world. Eventually, furthering my skills so that I can develop websites in a way that reflects the current technology and industry standards.</p>
-                </div>
-            </section>
+                    <div class="dropdown">
+                        <button class="dropbtn">XML</button>
+                        <div class="dropdown-content">
+                            <a href="#xml-rules">XML Rules</a>
+                            <a href="#xml-rss">XML RSS</a>
+                        </div>
+                    </div>
 
+                    <div class="dropdown">
+                        <button class="dropbtn">Research</button>
+                        <div class="dropdown-content">
+                            <a href="#seo">SEO</a>
+                            <a href="#copyright">Copyright</a>
+                            <a href="#references">References</a>
+                        </div>
+                    </div>
+                    <a href="#Javascript">Javascript</a>
+                    <a href="javascript:void(0);" class="icon" onclick="collapseNavBar()">&#9776;</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Section 1: Showcase -->
+        <section id="showcase">
+            <div class="container">
+                <h1 class="showcase-text">Advanced Internet and Web Learning Portfolio</h1>
+                <br>
+                <p class="showcase-text"> I'm taking this course because I want to further my knowledge and skills on website development so that I am better equipped for the industry. I want to take my practical skills in web development to the next level so that I can confidently create a website that would be aesthetically pleasing and fully functional on my own in the real world. Eventually, furthering my skills so that I can develop websites in a way that reflects the current technology and industry standards.</p>
+            </div>
+        </section>
+
+        <!-- Puts the web tech and bio section side by side -->
+        <div class="two-col">
             <!-- Section 2: My 10 Web Technologies -->
             <section id="web-tech">
                 <div class="container">
                     <h2>My Web Technologies</h2>
                     <p>Make a list and describe the top ten web technologies you use (This could be hardware or 
-                        software), e.g. Google Drive, for backing up assessments and sharing files.</p>
+                    software), e.g. Google Drive, for backing up assessments and sharing files.</p>
                     <ol type="1">
                         <li>HTML 5</li>
                         <li>CSS 3</li>
@@ -87,67 +88,65 @@
                     </ol>
                 </div>
             </section>
-
+    
             <!-- Section 3: My Bio -->
             <section id="bio">
                 <div class="container">
                     <h2>Bio</h2>
-                    <img src="images/my-avatar.svg" alt="My Avatar">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <img src="images/my-avatar.svg" alt="My Avatar" class='bio-txt'>
+                    <p>My name is Alicia, and I enjoy coding, and creating apps and websites. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
-            </section>
+            </section>   
+        </div>
 
-            <!-- Section 4: Development Skills -->
-            <section id="skills">
-                <div class="container">
-                    <h2>Development Skills</h2>
-                    <div class="nested-grid">                        
-                        <div>
-                            <br>
-                            <img src="images/html-5.svg" alt="Html 5 Logo">   
-                            <br>
-                            <p><strong>HTML 5 Markup</strong></p>     
-                            <br>         
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>
-                        </div>
-                            
-                        <div>
-                            <br>
-                            <img src="images/css-3.svg" alt="CSS Logo">
-                            <br>
-                            <p><strong>CSS 3 Styling</strong></p>
-                            <br>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>
-                        </div>
-
-                        <div>
-                            <br>
-                            <img src="images/xml-file.svg" alt="Javascript Logo">
-                            <br>
-                            <p><strong>Javascript Interactivity</strong></p>
-                                <br>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>                                
-                        </div>
+        <!-- Section 4: Development Skills -->
+        <section id="skills">
+            <div class="container">
+                <h2>Development Skills</h2>
+                <div class="skills-grid">                        
+                    <div id="html">
+                        <br>
+                        <img src="images/html-5.svg" alt="Html 5 Logo">   
+                        <br>
+                        <p><strong>HTML 5 Markup</strong></p>     
+                        <br>         
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>
                     </div>
-                </div>  
-            </section>
+                            
+                    <div id="css">
+                        <br>
+                        <img src="images/css-3.svg" alt="CSS Logo">
+                        <br>
+                        <p><strong>CSS 3 Styling</strong></p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>
+                    </div>
 
+                    <div id="js">
+                        <br>
+                        <img src="images/xml-file.svg" alt="Javascript Logo">
+                        <br>
+                        <p><strong>Javascript Interactivity</strong></p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend sodales arcu, non sagittis augue placerat vitae. Nam at lacus ultrices. </p>                                
+                    </div>
+                </div>
+            </div>  
+        </section>
 
-            <!-- Section 5: Statement of Authenticity -->
-            <section id="authenticity">
-                <h2>Statement of Authenticity</h2>
-                <p>I confirm that
-                <br>
-                <p>This is an original assesment and is entirely my own work. It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text. No material which to a substantial extent has been submitted for any other academic course is included without acknowledge.
-                <br><br>
-                <strong>Proudly developed by Chris Smith </strong> and rebuilt by Alicia Notley
+        <!-- Section 5: Statement of Authenticity -->
+        <section id="authenticity">
+            <h2>Statement of Authenticity</h2>
+            <p>I confirm that
+            <br>
+            <p>This is an original assessment and is entirely my own work. It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text. No material which to a substantial extent has been submitted for any other academic course is included without acknowledge.
+            <br><br>
+            <strong>Proudly developed by Chris Smith </strong> and rebuilt by Alicia Notley</p>
+        </section>
 
-                </p>
-            </section>
-
-            <footer>
-                <h1>Footer</h1>
-            </footer>
-        </div>    
+        <footer>
+            <p class='footer-padding'>Advanced Web Design, Copyright &#169; 2018</p>
+            <p class="icon-reference">Icons made by Icomoon from www.flaticon.com is licensed by CC 3.0 BY</p>
+        </footer>   
     </body>
 </html>

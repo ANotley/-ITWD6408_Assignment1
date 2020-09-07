@@ -1,6 +1,8 @@
 /*--------- GLOBAL STYLES -------*/
 * {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -19,19 +21,9 @@ body {
     overflow: hidden;
 }
 
-/* Wraps all of the content in the body in order for css grid to be set up */
-.wrapper {
-    /* display: grid;
-    overflow: hidden;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr); */
-}
-
-footer {
-    min-height: 4.2em;
-    background-color: #2a3a4a;
-    color: white;
-    text-align: center;
+/* Adding padding to enforce spaces instead of abusing <br> tags. */
+#bio h2,  #web-tech h2, #skills h2, #authenticity h2, #authenticity p, #brief h1 {
+    padding-bottom: 0.5em;
 }
 
 /* ------------HEADER & NAV BAR SECTION - GLOBAL STYLE ---------------- */
@@ -66,14 +58,11 @@ header .topnav {
     margin-top: 10px;
     vertical-align: middle;
 }
-  
-
 
 header a, .dropbtn { /*nav bar links*/
     text-transform: uppercase;
     color: white;
     text-decoration: none;
-    /* padding: 14px 16px; */
     text-align: center;
     overflow: hidden;
     padding: 0 20px; /*Change to a responsive value*/
@@ -95,7 +84,7 @@ header a, .dropbtn { /*nav bar links*/
     display: none;
 }
   
-  /* Dropdown container - needed to position the dropdown content */
+/* Dropdown container - needed to position the dropdown content */
 .dropdown {
     float: left;
 }
@@ -148,39 +137,6 @@ header a, .dropbtn { /*nav bar links*/
   .dropdown:hover .dropdown-content {
     display: block;
 }
-  
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-    }
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .topnav.responsive .dropdown {float: none;}
-    .topnav.responsive .dropdown-content {position: relative;}
-    .topnav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-}
 
 /* ------------SECTION 1: SHOWCASE --------------- */
 /* Sets the background image of the section to the showcase image. */
@@ -192,6 +148,8 @@ header a, .dropbtn { /*nav bar links*/
     justify-content: center;
     background-image: url('../images/showcase-image.jpeg');
     background-size: cover;
+    padding-top: 4em;
+    padding-bottom: 2em;
 }
 
 /* Adds a dark grey overlay at 50% opacity */
@@ -220,12 +178,13 @@ header a, .dropbtn { /*nav bar links*/
 #web-tech {
     background-color: #007491;;
     color: black;
-    padding: 0 0 2rem 0;  
+    padding: 2em 0 2rem 2em;  
     min-height: 30vh;
     width: 100%;
+    list-style-position: inside;
 }
 
-#web-tech h1 {
+#web-tech h2 {
     font-size: 1.5em;
 } 
 
@@ -233,19 +192,20 @@ header a, .dropbtn { /*nav bar links*/
 #bio {
     background-color: #2a9b35;
     width: 100%;
-
-    /* CSS GRID */
-    grid-row: 3/4;
+    padding: 2rem 0;
 }
 
 #bio img {
-    height: 8.0em;
-    width: 8.0em;
-    border-radius: ;
+    display: block;
+    margin: 0 auto;
+    /* height: 8.0em;
+    width: 8.0em; */
+    /* border-radius: 50%;  */
     object-fit: contain;
-    max-width: 30%;
+    max-width: 80%;
     height: auto;
-    align-items: center;
+    align-content: center;
+    margin-bottom: 1em;
 }
 
 /* ------------SECTION 4: DEVELOPMENT SKILLS --------------- */
@@ -253,7 +213,7 @@ header a, .dropbtn { /*nav bar links*/
     padding: 2rem 0;
 } 
 
-.nested-grid {
+.skills-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;  
@@ -261,12 +221,12 @@ header a, .dropbtn { /*nav bar links*/
     overflow: hidden;
 } 
 
-.nested-grid > div {
+.skills-grid > div {
     background: lightgray;
     padding: 0.5em;
 }
 
-.nested-grid img {
+.skills-grid img {
     object-fit: contain;
     max-width: 30%;
     height: auto;
@@ -276,6 +236,7 @@ header a, .dropbtn { /*nav bar links*/
 /* ------------SECTION 5: STATEMENT OF AUTHENTICITY --------------- */
 #authenticity {
     background-color: tomato;
+    padding: 2rem 1em 0 2rem;
 }
 
 #authenticity > h2 {
@@ -285,23 +246,52 @@ header a, .dropbtn { /*nav bar links*/
 #authenticity > p {
     font-size: 1.2em;
 }
+
+
 /* ------------ FOOTER -------------- */
 footer {
     border-top: #2a9b35 6px solid;
+    min-height: 6.2em;
+    text-align: center;
+    background-color: #2a3a4a;
+    color: white;
+}
+
+.footer-padding {
+    padding: 1.5em 0;
+}
+
+/* ------------ HTML Form Page -------------- */
+#brief {
+    background-color: #7b8091;
+    min-height: 25vh;
+    margin: 0;
+    padding: 0.5em 0 0.5em 0.5em;
+}   
+
+#html-form {
+    background-color: rgb(238, 232, 232);
+    padding: 2rem 0;
+} 
+
+ #html-form label {
+    margin-right: 2em;
+    margin: 0 auto;
+}  
+
+/* When moving the mouse over the submit button, add a green color  */
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #acf0af;
 }
 
 /* ------------ RESPONSIVENESS ----------------- */
+/* ----- NAV BAR Responsiveness - collapses the menu for the smart phone -----*/
 /*TABLET*/
 @media screen and (min-width: 600px) { 
     /* ----- HEADER & NAV BAR SECTION -----*/
     .tagline {
         float: right; 
         text-indent: 1em;  
-        /* position: absolute;*/
-        /* top: 50%; 
-        transform: translateY(-50%);
-        margin: 0; 
-        */
     } 
 
      /* ----- SECTION 1: SHOWCASE -----*/
@@ -320,31 +310,11 @@ footer {
     /* ----- SECTION 3: MY BIO -----*/
     #bio {
         width: 100%;
-        /* CSS GRID */
-        grid-column: 2/3;
-        grid-row: 3/4;
     }
 }
 
 /* DESKTOP*/
-@media screen and (min-width:768px){
-    /* ----- GLOBAL STYLES ----- */
-    /* Wraps all of the content in the body in order for css grid to be set up */
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-auto-columns: 50%;
-    }
-
-    /* ----- HEADER & NAV BAR SECTION -----*/
-    header {
-        /* CSS GRID */
-        grid-column: 1/3;
-        grid-row: 1/2;
-    }
-
-	  
+@media screen and (min-width:768px){  
     .logo {
         width: 3.0em; 
         height: 3.0em;
@@ -360,54 +330,75 @@ footer {
     /* Showcase Section*/
     #showcase {
         min-height: 30vh;
-        font-size: 1.5em;
-
-        /* CSS GRID */
-        grid-column: 1/3;
-        grid-row: 2/3;
+        padding-top:6em;
     }
 
-    /* ----- SECTION 2: WEB TECHNOLOGIES -----*/
-    #web-tech {
-        /* CSS GRID */
-        grid-column: 1/2;
-        grid-row: 3/4;
-    } 
-
-    /* ----- SECTION 3: MY BIO -----*/
-    #bio {
-        /* CSS GRID */
-        grid-column: 2/3;
-        grid-row: 3/4;
+    /* ----- SECTION 2: WEB TECH and BIO SECTIONS -----*/
+    .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    /* ----- SECTION 4: DEVELOPMENT SKILLS -----*/
-    #skills {
-        /* CSS GRID */
-        grid-column: 1/3;
-        grid-row: 4/5;
+    #bio img{
+        max-width: 40%;
+        height: auto;
+        float: left;
+        margin: 0 2em 0.5em auto;
+
     }
 
+    /* ----- SECTION 4: DEVELOPMENT SKILLS -----*
     /* Make the development skills section span across in three columns on desktop */
-    .nested-grid {
+    .skills-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 1em;  
         text-align: center;
     } 
 
-    /* ----- SECTION 5: STATEMENT OF AUTHENTICITY -----*/
-    #authenticity {
-        /* CSS GRID */
-        grid-column: 1/3;
-        grid-row: 5/6;
+    /* ----- FOOTER ----- */
+    .icon-reference {
+        float: right;
     }
 
-    /* ----- FOOTER ----- */
-    footer {
-        /* CSS GRID */  
-        grid-column: 1/3;
-        grid-row: 6/7;
+    /* ----- HTML FORM ----- */
+    #html-form input,
+    #html-form textarea,
+    #html-form label,
+	#html-form select	{/*Responsive: contact form takes up only 50% of screen width instead of 80%*/
+        /* width: 50vw;  */
+        /* margin: 0 auto 1em 20vw; */
     }
 }
+
+@media screen and (max-width: 600px) {   
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+} 
 
