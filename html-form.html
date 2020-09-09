@@ -12,7 +12,7 @@
         <!--Link to external JS script -->
         <script src="scripts/scripts.js"></script>
 
-        <title> Assignment 1 | HTML Form</title>
+        <title> Assignment 1 | Alicia</title>
     </head>
     <body>
         <header>
@@ -30,7 +30,7 @@
                         <button class="dropbtn active">Forms</button>
                         <div class="dropdown-content">
                             <a href="html-form.html" class="active">HTML Forms</a>
-                            <a href="#google-forms">Google Forms</a>
+                            <a href="google-form.html">Google Forms</a>
                         </div>
                     </div>
 
@@ -56,58 +56,60 @@
             </div>
         </header>
 
-        <section id="brief">
+        <!-- Page Header -->
+        <section id="formPage-headers">
             <h1>HTML Form</h1>
             <p>Form generated to post to an email account.</p>
         </section>
 
+        <!-- HTML Form -->
         <section id="html-form">
-            <div class="container">
+            <div class="container html-div">
                 <form action="daniel.dang.nz@gmail.com" enctype="text/plain">
-                    <label for="first-name">First Name:</label>
+                    <label for="first-name" id="firstName-label">First Name:</label>
                     <input type="text" id="first-name" name="firstname" placeholder="Your name..">
                     <br>
                     
-                    <label for="last-name">Last Name:</label>
+                    <label for="last-name" id="lastName-label">Last Name:</label>
                     <input type="text" id="last-name" name="lastname" placeholder="Your last name..">
                     <br>
 
                     <strong><label>Address</label></strong><br>
-                    <label for="line-1">Line 1:</label>
+                    <label for="line-1" id="line1-label">Line 1:</label>
                     <input type="text" id="line-1" name="line1" placeholder="Your address..">
                     <br>
-                    <label for="line-2">Line 2:</label>
+                    <label for="line-2" id="line2-label">Line 2:</label>
                     <input type="text" id="line-2" name="line2" placeholder="Your address..">
                     <br>
-                    <label for="town-city">Town/City:</label>
+                    <label for="town-city" id="townCity-label">Town/City:</label>
                     <input type="text" id="town-city" name="towncity" placeholder="Your address..">
                     <br>
 
-                    <label>Gender:</label>
-                    <div>
-                        <input type="radio" name="gender" value="male">
+                    <div class="radio-btn-div">
+                        <label id="gender-label">Gender:</label>
+                        <input type="radio" name="gender" id="male" value="male">
                         <label for="male">Male</label> &nbsp;
-                        <input type="radio" name="gender"  value="female">
+                        <input type="radio" name="gender"  id="female" value="female">
                         <label for="female">Female</label> &nbsp;
-                        <input type="radio"name="gender" value="other">
+                        <input type="radio"name="gender" id="other" value="other">
                         <label for="other">Other</label>    
                     </div>
-                    <br>
-
-                    <label>Mobile Phone Type:</label>
-                    <div>
-                        <input type="radio" name="mobile-type" value="windows">
+                    <br><br>
+                   
+                    <div class="radio-btn-div">
+                        <label id="mobileType-label">Mobile Phone Type:</label>
+                        <input type="radio" name="mobile-type" id="windows" value="windows">
                         <label for="windows">Windows</label> &nbsp;
-                        <input type="radio" name="mobile-type"  value="apple">
+                        <input type="radio" name="mobile-type" id="apple" value="apple">
                         <label for="apple">Apple</label> &nbsp;
-                        <input type="radio"name="mobile-type" value="android">
+                        <input type="radio"name="mobile-type" id="android" value="android">
                         <label for="android">Android</label>  &nbsp;
-                        <input type="radio"name="mobile-type" value="other">
+                        <input type="radio"name="mobile-type" id="Other" value="other">
                         <label for="other">Other</label>   
                     </div>
-                    <br>
+                    <br><br>
 
-                    <label for="mobile-provider">Mobile Provider</label>
+                    <label for="mobile-provider" id="mobileProvider-label">Mobile Provider:</label>
                     <select id="mobile-provider" name="mobileProvider">
                       <option value="default" select>None</option>
                       <option value="2degrees">2Degrees</option>
@@ -116,18 +118,19 @@
                       <option value="vodafone">Vodafone</option>
                       <option value="other">Other</option>
                     </select>
-                    <br>
+                    <br><br>
                 
-                    <label for="explanation">Do you use your phone <br>for study? Please explain: </label>
+                    <label for="explanation" id="explanation-label">Do you use your phone for study? Please explain: </label>
                     <textarea id="explanation" name="explanation" placeholder="Enter your explanation here.."></textarea>
-                    <br>
+                    <br><br>
 
-                    <input type="reset" value="Reset">
+                    <input type="reset" value="Reset" class="form-btn">
                     <input type="submit" value="Submit">
                 </form>
             </div>
         </section>
-        
+
+        <!-- Footer -->
         <footer>
             <p class="footer-padding    ">Advanced Web Design, Copyright &#169; 2018</p>
             <p class="icon-reference">Icons made by Icomoon from www.flaticon.com is licensed by CC 3.0 BY</p>
